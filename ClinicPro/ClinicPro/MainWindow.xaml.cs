@@ -43,17 +43,21 @@ namespace ClinicPro
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = System.Windows.MessageBox.Show("Вы действительно хотите выйти из приложения?",
-                                              "Подтверждение выхода",
-                                              MessageBoxButton.YesNo,
-                                              MessageBoxImage.Question);
+            MessageBoxWW messageBoxWW = new MessageBoxWW();
 
-            // Если пользователь выбрал "Yes", закрываем приложение
-            if (result == MessageBoxResult.Yes)
+            messageBoxWW.Owner = this;
+
+            messageBoxWW.ShowDialog();
+
+            if (messageBoxWW.isConfirmed)
             {
-                System.Windows.Application.Current.Shutdown();
+                this.Close();
             }
-            // Если "No", ничего не делаем, диалоговое окно просто закрывается
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }

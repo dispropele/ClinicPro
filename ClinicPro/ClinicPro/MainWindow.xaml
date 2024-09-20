@@ -8,7 +8,9 @@
         Title="ClinicPro" Height="630" Width="800"
         Background="Transparent" ResizeMode="NoResize"
         WindowStyle="None"
-        AllowsTransparency="True">
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterOwner"
+        MouseDown="Window_MouseDown">
     <Grid x:Name="MainGrid" >
         
         <Frame x:Name="MainFrame"/>
