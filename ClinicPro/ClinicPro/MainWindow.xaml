@@ -1,0 +1,163 @@
+﻿<Window x:Class="ClinicPro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClinicPro"
+        mc:Ignorable="d"
+        Title="ClinicPro" Height="630" Width="800"
+        Background="Transparent" ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True">
+    <Grid x:Name="MainGrid" >
+        
+        <Frame x:Name="MainFrame"/>
+
+        <Border Background="#BFCAEF" CornerRadius="20"/>
+
+        <Grid x:Name="header"
+              
+              VerticalAlignment="Top" Height="50"
+              Background="Transparent" >
+            <Border CornerRadius="20" Background="#FF7C92DA"/>
+            <TextBlock FontSize="20" Text="ClinicPro" Foreground="#FF464646" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        <Grid x:Name="sideMenu" HorizontalAlignment="Left"
+              Background="Transparent" Width="100" >
+            <Border Background="#FF7C92DA" CornerRadius="20"/>
+            <StackPanel>
+                
+                <StackPanel.Resources>
+
+                    <Style TargetType="Button" x:Key="MenuButtonStyle">
+                        <!-- Закругляем края кнопки -->
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="35">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <!-- Убираем границу по умолчанию -->
+                        <Setter Property="Background" Value="LightGray"/>
+                        <Setter Property="BorderBrush" Value="Transparent"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+                        <!-- Триггеры для изменения стиля при наведении -->
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </StackPanel.Resources>
+
+
+
+                <Grid Height="70" Background="Transparent" HorizontalAlignment="Center">
+                    <TextBlock
+                            FontFamily="JetBrains Mono"
+                            Text="ClinicPro"
+                            FontSize="20"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"/>
+                </Grid>
+
+                <Grid>
+                    <Button
+                        Width="70" Height="70"
+                        Margin="5 0 0 45"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Cursor="Hand">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="imgs/Home.png" Height="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="Home" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid>
+                    <Button
+                        Width="70" Height="70"
+                        Margin="5 0 0 45"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Cursor="Hand">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="imgs/medicines.png" Height="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="Medicines" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid>
+                    <Button
+                        Width="70" Height="70"
+                        Margin="5 0 0 45"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Cursor="Hand">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="imgs/chat_bubble.png" Height="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="Chat" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid>
+                    <Button
+                        Width="70" Height="70"
+                        Margin="5 0 0 45"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Cursor="Hand">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="imgs/Settings.png" Height="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="Settings" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid>
+                    <Button
+                        Width="70" Height="70"
+                        Margin="5 0 0 45"
+                        Background="#FFE14545"
+                        Cursor="Hand"
+                        Click="ExitButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FFE14545"/>
+                                <!-- Начальный цвет -->
+                                <Setter Property="BorderBrush" Value="Transparent"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                CornerRadius="35">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Button.Style>
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="imgs/Log out.png" Height="30" VerticalAlignment="Center"/>
+                            <TextBlock Text="Exit" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+
+</Window>
