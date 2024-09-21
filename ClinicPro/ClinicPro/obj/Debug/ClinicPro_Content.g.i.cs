@@ -8,12 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/category.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/chat_bubble.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/home.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/log%20out.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/logo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/medicines.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/settings.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo2.ico")]
 
 
