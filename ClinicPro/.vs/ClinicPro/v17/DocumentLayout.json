@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BDE5C2D6-417D-4535-B34A-5916E8F7932C}|ClinicPro\\ClinicPro.csproj|c:\\users\\dispropele\\desktop\\clinicpro\\clinicpro\\clinicpro\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{BDE5C2D6-417D-4535-B34A-5916E8F7932C}|ClinicPro\\ClinicPro.csproj|solutionrelative:clinicpro\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BDE5C2D6-417D-4535-B34A-5916E8F7932C}|ClinicPro\\ClinicPro.csproj|c:\\users\\dispropele\\desktop\\clinicpro\\clinicpro\\clinicpro\\mainmenu.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{BDE5C2D6-417D-4535-B34A-5916E8F7932C}|ClinicPro\\ClinicPro.csproj|solutionrelative:clinicpro\\mainmenu.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,21 +28,8 @@
         },
         {
           "DockedWidth": 563,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainMenu.xaml",
-              "DocumentMoniker": "C:\\Users\\dispropele\\Desktop\\ClinicPro\\ClinicPro\\ClinicPro\\MainMenu.xaml",
-              "RelativeDocumentMoniker": "ClinicPro\\MainMenu.xaml",
-              "ToolTip": "C:\\Users\\dispropele\\Desktop\\ClinicPro\\ClinicPro\\ClinicPro\\MainMenu.xaml",
-              "RelativeToolTip": "ClinicPro\\MainMenu.xaml",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAGQAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-21T09:06:34.798Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -77,7 +60,7 @@
               "RelativeDocumentMoniker": "ClinicPro\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\dispropele\\Desktop\\ClinicPro\\ClinicPro\\ClinicPro\\MainWindow.xaml",
               "RelativeToolTip": "ClinicPro\\MainWindow.xaml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACwAAABFAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAMwFEAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-09-21T09:21:47.818Z",
               "EditorCaption": ""

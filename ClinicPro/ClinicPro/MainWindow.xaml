@@ -21,13 +21,14 @@
 
         <Grid x:Name="Body">
             <!--Сейчас разделил примерную сетку-->
-            <StackPanel Grid.Column="1" Grid.Row="1"
+            <StackPanel Grid.Column="1" Grid.Row="1" 
                 VerticalAlignment ="Center"
                 HorizontalAlignment="Center" Height="260" Width="260">
                 <Border Background="#D9D9D9"
                 CornerRadius="25"
                 BorderBrush="Transparent"
                 Height="260" Width="260"/>
+                <!--Колонка Записей на прием-->
 
 
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
@@ -60,19 +61,55 @@
                 </ScrollViewer>
 
             </StackPanel>
+
+            <!--Колонка Все Пациенты-->
+            <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
+                        VerticalAlignment ="Center">
+                
+                <Border Background="#D9D9D9" CornerRadius="25"
+                        BorderBrush="Transparent"
+                        Height="260" Width="260"/>
+            </StackPanel>
+
+            <!--Колонка Текущий прием-->
+            <StackPanel Grid.Column="2" Grid.Row="1"
+                        Grid.ColumnSpan="2" Grid.RowSpan="2"
+                        VerticalAlignment ="Center"> 
+                
+                <Border Background="#D9D9D9" CornerRadius="25"
+                        BorderBrush="Transparent"
+                        Height="330" Width="370"/>
+            </StackPanel>
+
+            <!--Колонка История-->
+            <StackPanel Grid.Column="2" Grid.Row="3"
+                        VerticalAlignment ="Center">
+
+                <Border Background="#D9D9D9" CornerRadius="25"
+                        BorderBrush="Transparent"
+                        Height="190" Width="180"/>
+            </StackPanel>
+
+            <!--Колонка Колендарь-->
+            <StackPanel Grid.Column="3" Grid.Row="3"
+                        VerticalAlignment ="Center">
+
+                <Border Background="#D9D9D9" CornerRadius="25"
+                        BorderBrush="Transparent"
+                        Height="190" Width="180"/>
+            </StackPanel>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100*"/>
                 <ColumnDefinition Width="300*"/>
-
-                <ColumnDefinition Width="217*"/>
-                <ColumnDefinition Width="183*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="46*"/>
-                <RowDefinition Height="299*"/>
-
-                <RowDefinition Height="148*"/>
-                <RowDefinition Height="137*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="300*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="220*" />
             </Grid.RowDefinitions>
 
 
