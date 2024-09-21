@@ -1,0 +1,181 @@
+﻿<UserControl x:Class="ClinicPro.Login.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ClinicPro.Login"
+             xmlns:local2="clr-namespace:ClinicPro"
+             mc:Ignorable="d" 
+             d:DesignHeight="630" d:DesignWidth="800"
+             Background="Transparent">
+    <Grid x:Name="MainGrid">
+        <Frame x:Name="DoctorHome"/>
+
+        <Border Background="#BFCAEF" CornerRadius="20"/>
+
+        <local2:MainMenu/>
+
+        <Grid x:Name="BodyLogin">
+
+            <StackPanel Grid.Row="1" Grid.Column="1"
+                        Grid.ColumnSpan="2" Grid.RowSpan="2"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                <Border Background="#D9D9D9"
+                        Height="480" Width="500"
+                        CornerRadius="25">
+
+                    <Grid x:Name="LoginBody">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="90*"/>
+                            <RowDefinition Height="90*"/>
+                            <RowDefinition Height="140*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Вход" Grid.Row="0"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   Margin="0,20,0,0" Foreground="#6F6F6F"
+                                   FontSize="36" Height="50"/>
+
+                        <TextBox x:Name="TextBoxLogin"
+                                 Text="Ваш логин"
+                                 Grid.Row="1" Width="400" Height="70"
+                                 Background="#FFFFFF" Foreground="#969696"
+                                 Cursor="IBeam" FontSize="28"
+                                 Padding="30 0 0 0"
+                                 GotFocus="TextBoxLogin_GotFocus"
+                                 LostFocus="TextBoxLogin_LostFocus"
+                                 VerticalContentAlignment="Center">
+
+                            <TextBox.Template>
+                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                    <Border CornerRadius="20" 
+                                            Background="{TemplateBinding Background}" 
+                                            Cursor="IBeam">
+                                        <!-- Контент-презентер для отображения текста -->
+                                        <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+
+                        </TextBox>
+
+
+
+                        <PasswordBox x:Name="PassBoxPassword"
+                                     Grid.Row="2" Width="400" Height="70"
+                                     Background="#FFFFFF"
+                                     Cursor="IBeam" PasswordChar="*" FontSize="28"
+                                     Padding="30 0 0 0" Visibility="Visible"
+                                     VerticalContentAlignment="Center"
+                                     GotFocus="PassBoxLogin_GotFocus"
+                                     LostFocus="PassBoxLogin_LostFocus"
+                                     PasswordChanged="PassBoxPassword_PasswordChanged">
+                            <PasswordBox.Template>
+                                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                                    <Border CornerRadius="20" 
+                                            Background="{TemplateBinding Background}">
+                                        <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </PasswordBox.Template>
+                        </PasswordBox>
+
+                        <TextBox x:Name="TextBoxPassword"
+                                 Width="400" Height="70"
+                                 Background="#FFFFFF" FontSize="28"
+                                 VerticalContentAlignment="Center"
+                                 Visibility="Collapsed" Padding="30 0 0 0"
+                                 Text="{Binding TextBoxPasswordContent, UpdateSourceTrigger=PropertyChanged}"
+                                 Grid.Row="2">
+                            <TextBox.Template>
+                                <ControlTemplate TargetType="{x:Type TextBox}">
+                                    <Border CornerRadius="20" 
+                                            Background="{TemplateBinding Background}" 
+                                            Cursor="IBeam">
+                                        <!-- Контент-презентер для отображения текста -->
+                                        <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+
+                        <Label x:Name="LabelPassBox"
+                               Content="Пароль" Foreground="#969696"
+                               Target="{Binding ElementName=TextBoxLogin}"
+                               Grid.Row="2" HorizontalAlignment="Left"
+                               VerticalAlignment="Center" FontSize="28"
+                               Margin="70 0 0 0"/>
+
+                        <!--Глазок скрытия-->
+                        <Image x:Name="PassBoxEyeImg"
+                               Source="../imgs/Eye off.png"
+                               Grid.Row="2"
+                               Height="35" Width="35"
+                               HorizontalAlignment="Right"
+                               Margin="0 0 70 0"
+                               Cursor="Hand"
+                               MouseLeftButtonDown="PassBoxEyeClick"/>
+
+
+                        <Border x:Name="ButtonLogin"
+                                Background="#7290A1"
+                                Width="160" Height="60"
+                                CornerRadius="15" Grid.Row="3"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Margin="50 20 0 0" Cursor="Hand">
+                            <TextBlock Text="Войти"
+                                       Foreground="White"
+                                       FontSize="26"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Cursor="Hand"/>
+
+                        </Border>
+
+
+                        <TextBlock x:Name="ForgotPassword" Text="Забыли пароль?"
+                                   Grid.Row="3" Cursor="Hand"
+                                   HorizontalAlignment="Right"
+                                   VerticalAlignment="Top"
+                                   Foreground="#698096"
+                                   FontSize="26" Margin="0 30 50 0"
+                                   TextDecorations="Underline"/>
+
+                        <TextBlock x:Name="Registation" Text="Регистрация"
+                                   Grid.Row="3" Cursor="Hand"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Foreground="#698096"
+                                   FontSize="26" Margin="0 90 0 0"
+                                   TextDecorations="Underline"/>
+
+                    </Grid>
+
+
+                </Border>
+
+
+
+            </StackPanel>
+
+
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="350*"/>
+                <ColumnDefinition Width="350*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="30*"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+    </Grid>
+</UserControl>

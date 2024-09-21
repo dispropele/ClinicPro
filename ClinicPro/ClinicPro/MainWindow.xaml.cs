@@ -24,11 +24,27 @@ namespace ClinicPro
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isHomeActive
+                    ,isMedicineActive
+                    ,isChatActive
+                    ,isSettingsActive = false;
+
+        public bool isFirstLogin = true;
+        
 
         public MainWindow()
         {
             InitializeComponent();
             
+            if (isFirstLogin)
+            {
+                MainFrame.Navigate(new Login.Login());
+                isFirstLogin = false;
+            }
+            else
+            {
+                MainFrame.Navigate(new Doctor.Home.HomePage());
+            }
         }
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)

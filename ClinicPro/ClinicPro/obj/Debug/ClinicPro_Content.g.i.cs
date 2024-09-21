@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo2.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/eye%20off.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imgs/eye.png")]
 
 

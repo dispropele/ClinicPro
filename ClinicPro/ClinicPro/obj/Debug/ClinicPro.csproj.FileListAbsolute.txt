@@ -23,3 +23,7 @@ C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\MainMenu.g.c
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\App.baml
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\MainMenu.baml
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Doctor\Home\HomePage.g.cs
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Login\Login.g.cs
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Doctor\Home\HomePage.baml
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Login\Login.baml

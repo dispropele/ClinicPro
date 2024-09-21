@@ -13,107 +13,10 @@
         MouseDown="Window_MouseDown">
     <Grid x:Name="MainGrid" >
 
-        <Frame x:Name="MainFrame"/>
-
         <Border Background="#BFCAEF" CornerRadius="20"/>
 
-        <local:MainMenu/>
 
-        <Grid x:Name="Body">
-            <!--Сейчас разделил примерную сетку-->
-            <StackPanel Grid.Column="1" Grid.Row="1" 
-                VerticalAlignment ="Center"
-                HorizontalAlignment="Center" Height="260" Width="260">
-                <Border Background="#D9D9D9"
-                CornerRadius="25"
-                BorderBrush="Transparent"
-                Height="260" Width="260"/>
-                <!--Колонка Записей на прием-->
-
-
-                <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
-                    <ItemsControl ItemsSource="{Binding Patients}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Horizontal" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border Width="200" Height="300" Margin="10" Background="LightGray" CornerRadius="10">
-                                    <StackPanel>
-                                        <!-- ФИО пациента -->
-                                        <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold" Margin="5"/>
-
-                                        <!-- Время записи -->
-                                        <TextBlock Text="{Binding AppointmentTime}" Margin="5"/>
-
-                                        <!-- Кнопки -->
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                                            <Button Content="Подтвердить" Margin="5" Command="{Binding ConfirmCommand}" />
-                                            <Button Content="Отменить" Margin="5" Command="{Binding CancelCommand}" />
-                                        </StackPanel>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </ScrollViewer>
-
-            </StackPanel>
-
-            <!--Колонка Все Пациенты-->
-            <StackPanel Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
-                        VerticalAlignment ="Center">
-                
-                <Border Background="#D9D9D9" CornerRadius="25"
-                        BorderBrush="Transparent"
-                        Height="260" Width="260"/>
-            </StackPanel>
-
-            <!--Колонка Текущий прием-->
-            <StackPanel Grid.Column="2" Grid.Row="1"
-                        Grid.ColumnSpan="2" Grid.RowSpan="2"
-                        VerticalAlignment ="Center"> 
-                
-                <Border Background="#D9D9D9" CornerRadius="25"
-                        BorderBrush="Transparent"
-                        Height="330" Width="370"/>
-            </StackPanel>
-
-            <!--Колонка История-->
-            <StackPanel Grid.Column="2" Grid.Row="3"
-                        VerticalAlignment ="Center">
-
-                <Border Background="#D9D9D9" CornerRadius="25"
-                        BorderBrush="Transparent"
-                        Height="190" Width="180"/>
-            </StackPanel>
-
-            <!--Колонка Колендарь-->
-            <StackPanel Grid.Column="3" Grid.Row="3"
-                        VerticalAlignment ="Center">
-
-                <Border Background="#D9D9D9" CornerRadius="25"
-                        BorderBrush="Transparent"
-                        Height="190" Width="180"/>
-            </StackPanel>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100*"/>
-                <ColumnDefinition Width="300*"/>
-                <ColumnDefinition Width="200*"/>
-                <ColumnDefinition Width="200*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50*"/>
-                <RowDefinition Height="300*"/>
-                <RowDefinition Height="70*"/>
-                <RowDefinition Height="220*" />
-            </Grid.RowDefinitions>
-
-
-        </Grid>
+        <Frame x:Name="MainFrame"/>
 
 
     </Grid>

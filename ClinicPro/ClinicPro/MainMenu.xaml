@@ -87,9 +87,10 @@
 
                 <Grid>
                     <Button
-                    Width="70" Height="70"
-                    Background="#FFE14545"
-                    Click="ExitButton_Click">
+                            Width="70" Height="70"
+                            Background="#FFE14545"
+                            Cursor="Hand"
+                            Click="ExitButton_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#FFE14545"/>
