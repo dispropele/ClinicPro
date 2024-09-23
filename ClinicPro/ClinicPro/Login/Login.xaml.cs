@@ -79,6 +79,9 @@ namespace ClinicPro.Login
             isVisiblePassword = !isVisiblePassword;
         }
 
-
+        private void RegistrationMoveClick(object sender, RoutedEventArgs e)
+        {
+            LoginFrame.Navigate(new Registration.Registration());
+        }
     }
 }

@@ -1,0 +1,9 @@
+CREATE TABLE [MedCard] (
+	[MedCardID] INTEGER NOT NULL,
+	[PatientID] INTEGER NOT NULL,
+	[DoctorID] INTEGER NOT NULL,
+	[StartDate] DATE NOT NULL,
+	PRIMARY KEY([MedCardID]),
+	FOREIGN KEY (PatientID) REFERENCES Patient(PatientID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctor(DoctorID)
+);

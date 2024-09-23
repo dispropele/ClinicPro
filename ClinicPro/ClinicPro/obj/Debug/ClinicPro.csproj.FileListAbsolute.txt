@@ -27,3 +27,5 @@ C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Doctor\Home\
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Login\Login.g.cs
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Doctor\Home\HomePage.baml
 C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Login\Login.baml
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Registration\Registration.g.cs
+C:\Users\dispropele\Desktop\ClinicPro\ClinicPro\ClinicPro\obj\Debug\Registration\Registration.baml

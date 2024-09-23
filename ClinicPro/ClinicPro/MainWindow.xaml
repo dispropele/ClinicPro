@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClinicPro"
         mc:Ignorable="d"
-        Title="ClinicPro" Height="630" Width="800"
+        Title="ClinicPro" Height="600" Width="800"
         Background="Transparent" ResizeMode="NoResize"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -15,6 +15,7 @@
 
         <Border Background="#BFCAEF" CornerRadius="20"/>
 
+        <local:MainMenu/>
 
         <Frame x:Name="MainFrame"/>
 

@@ -6,10 +6,9 @@
              xmlns:local="clr-namespace:ClinicPro.Login"
              xmlns:local2="clr-namespace:ClinicPro"
              mc:Ignorable="d" 
-             d:DesignHeight="630" d:DesignWidth="800"
+             d:DesignHeight="600" d:DesignWidth="800"
              Background="Transparent">
     <Grid x:Name="MainGrid">
-        <Frame x:Name="DoctorHome"/>
 
         <Border Background="#BFCAEF" CornerRadius="20"/>
 
@@ -108,7 +107,7 @@
                                Target="{Binding ElementName=TextBoxLogin}"
                                Grid.Row="2" HorizontalAlignment="Left"
                                VerticalAlignment="Center" FontSize="28"
-                               Margin="70 0 0 0"/>
+                               Margin="70 0 0 0" IsHitTestVisible="False"/>
 
                         <!--Глазок скрытия-->
                         <Image x:Name="PassBoxEyeImg"
@@ -152,7 +151,8 @@
                                    VerticalAlignment="Center"
                                    Foreground="#698096"
                                    FontSize="26" Margin="0 90 0 0"
-                                   TextDecorations="Underline"/>
+                                   TextDecorations="Underline"
+                                   MouseLeftButtonDown="RegistrationMoveClick"/>
 
                     </Grid>
 
@@ -176,6 +176,9 @@
                 <RowDefinition Height="30*"/>
             </Grid.RowDefinitions>
         </Grid>
-
+        
+        <Frame x:Name="LoginFrame"/>
+        
     </Grid>
+    
 </UserControl>
